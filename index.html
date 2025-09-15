@@ -6,10 +6,7 @@
   <title>Dijie Zhu</title>
   <meta name="description" content="Dijie Zhu — UCLA ECE · ML / Wireless / Robotics" />
   <style>
-    :root{
-      --maxw: 980px;
-      --accent: #c2185b; /* a soft magenta */
-    }
+    :root{ --maxw: 980px; --accent: #c2185b; }
     html,body{margin:0; padding:0}
     body{font:16px/1.75 system-ui, -apple-system, Segoe UI, Roboto, Arial; color:#222;}
     a{color:var(--accent); text-decoration:none}
@@ -43,16 +40,10 @@
     details{background:#fafafa; border:1px solid #eee; border-radius:8px; padding:10px 12px; margin-top:8px}
     pre{white-space:pre-wrap; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size:.9rem}
 
-    /* fine print & gallery */
     .fineprint{color:#777; font-size:.9rem; margin-top:8px}
-    .gallery{display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:12px; margin-top:14px}
-    .gallery img{width:100%; height:220px; object-fit:cover; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,.08)}
-
     footer{margin-top:36px; color:#777}
 
-    @media (max-width: 800px){
-      .hero{grid-template-columns:1fr}
-    }
+    @media (max-width: 800px){ .hero{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
@@ -62,7 +53,7 @@
       <a href="#bio" class="active">bio</a>
       <a href="#publications">publications</a>
       <a href="https://github.com/DijieZhu" target="_blank" rel="noopener">repositories</a>
-      <a href="#hobbies">hobbies</a>
+      <a href="./hobbies.html">hobbies</a>
     </nav>
 
     <!-- hero -->
@@ -104,11 +95,8 @@
         <div class="pub-title">Digital Nonlinearity Cancellation Architecture Based on An Auxiliary Transmit Antenna Array</div>
         <div class="authors">Fang Nan, Nanxi Li, <strong>Dijie Zhu</strong>, Yuetian Zhou, Sujie Dai, Jianchi Zhu, Jinlong Tian, Xiaoming She</div>
         <div class="venue">In <em>ITCC 2023: Proc. of the 5th International Conference on Information Technology and Computer Communications</em>, pp. 32–37.</div>
-        <div class="chips">
-          <a class="chip" href="https://doi.org/10.1145/3606843.3606849" target="_blank" rel="noopener">DOI</a>
-        </div>
-        <details>
-          <summary>BibTeX</summary>
+        <div class="chips"><a class="chip" href="https://doi.org/10.1145/3606843.3606849" target="_blank" rel="noopener">DOI</a></div>
+        <details><summary>BibTeX</summary>
 <pre>@inproceedings{zhu2023itcc,
   title={Digital Nonlinearity Cancellation Architecture Based on An Auxiliary Transmit Antenna Array},
   author={Nan, Fang and Li, Nanxi and Zhu, Dijie and Zhou, Yuetian and Dai, Sujie and Zhu, Jianchi and Tian, Jinlong and She, Xiaoming},
@@ -116,65 +104,42 @@
   year={2023},
   pages={32--37},
   doi={10.1145/3606843.3606849}
-}</pre>
-        </details>
+}</pre></details>
       </div>
 
       <div class="pub">
         <div class="pub-title">A Post-Correction Method for Terahertz Nonlinear Distortion with Dual-Band Carrier Aggregation</div>
         <div class="authors">Mengyao Zhang, Jian Liu, <strong>Dijie Zhu</strong>, Xin Quan, Qiang Xu, Ying Liu, Zhi Chen</div>
         <div class="venue">In <em>IEEE Globecom Workshops</em> (Sixth IEEE International Workshop on Terahertz Communications), 2022.</div>
-        <details>
-          <summary>BibTeX</summary>
+        <details><summary>BibTeX</summary>
 <pre>@inproceedings{zhu2022thz,
   title={A Post-Correction Method for Terahertz Nonlinear Distortion with Dual-Band Carrier Aggregation},
   author={Zhang, Mengyao and Liu, Jian and Zhu, Dijie and Quan, Xin and Xu, Qiang and Liu, Ying and Chen, Zhi},
   booktitle={IEEE Globecom Workshops},
   year={2022}
-}</pre>
-        </details>
+}</pre></details>
       </div>
 
       <div class="pub">
         <div class="pub-title">Improved Almost Blank Subframe Technology with Cooperative Interference Suppression</div>
         <div class="authors">Cong Chen, Zixuan Long, Fang Nan, Luyao Xiao, <strong>Dijie Zhu</strong>, Xiang Li, Ying Liu, Shihai Shao</div>
         <div class="venue"><em>International Journal of Numerical Modelling: Electronic Networks, Devices, and Fields</em>, 2023.</div>
-        <details>
-          <summary>BibTeX</summary>
+        <details><summary>BibTeX</summary>
 <pre>@article{zhu2023ijonm,
   title={Improved Almost Blank Subframe Technology with Cooperative Interference Suppression},
   author={Chen, Cong and Long, Zixuan and Nan, Fang and Xiao, Luyao and Zhu, Dijie and Li, Xiang and Liu, Ying and Shao, Shihai},
   journal={International Journal of Numerical Modelling: Electronic Networks, Devices, and Fields},
   year={2023}
-}</pre>
-        </details>
+}</pre></details>
       </div>
     </section>
 
-    <!-- hobbies -->
-    <section id="hobbies">
-      <h2>personal hobbies</h2>
-      <p class="fineprint">Many friends say I have a good eye for photography. I hope this small album gives you a brief break from study and life — enjoy the view.</p>
-      <div class="gallery">
-        <img src="./assets/hobbies/hobbies1.jpg" alt="hobby photo 1" loading="lazy" />
-        <img src="./assets/hobbies/hobbies2.jpg" alt="hobby photo 2" loading="lazy" />
-        <img src="./assets/hobbies/hobbies3.jpg" alt="hobby photo 3" loading="lazy" />
-        <img src="./assets/hobbies/hobbies4.jpg" alt="hobby photo 4" loading="lazy" />
-        <img src="./assets/hobbies/hobbies5.jpg" alt="hobby photo 5" loading="lazy" />
-        <img src="./assets/hobbies/hobbies6.jpg" alt="hobby photo 6" loading="lazy" />
-        <img src="./assets/hobbies/hobbies7.jpg" alt="hobby photo 7" loading="lazy" />
-        <img src="./assets/hobbies/hobbies8.jpg" alt="hobby photo 8" loading="lazy" />
-        <img src="./assets/hobbies/hobbies9.jpg" alt="hobby photo 9" loading="lazy" />
-        <img src="./assets/hobbies/hobbies10.jpg" alt="hobby photo 10" loading="lazy" />
-      </div>
-    </section>
-
-    <footer>
-      <p>Last updated: 2025-09-15</p>
-    </footer>
+    <footer><p>Last updated: 2025-09-15</p></footer>
   </div>
 </body>
 </html>
+
+
 
 
 
