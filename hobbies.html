@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dijie Zhu — Hobbies</title>
+  <meta name="description" content="Hobbies and photo album of Dijie Zhu" />
+  <style>
+    :root{ --maxw: 1100px; --accent: #c2185b; }
+    html,body{margin:0; padding:0}
+    body{font:16px/1.75 system-ui, -apple-system, Segoe UI, Roboto, Arial; color:#222; background:#fff;}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:26px 20px 60px}
+
+    /* top nav */
+    .nav{display:flex; align-items:center; justify-content:flex-end; gap:22px; padding:10px 0 24px;}
+    .nav a{color:#666}
+    .nav a.active{color:var(--accent); font-weight:600}
+
+    h1{font-size:2.2rem; margin:0 0 8px}
+    h2{font-size:1.6rem; margin:24px 0 10px}
+    .muted{color:#555}
+    .fineprint{color:#777; font-size:.95rem; margin-top:6px}
+
+    /* gallery (bigger thumbs) */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+      gap:14px; margin-top:16px
+    }
+    .card{
+      position:relative; overflow:hidden; border-radius:12px;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      background:#f6f6f6;
+    }
+    .card img{
+      width:100%; height:300px; object-fit:cover; display:block;
+      transition:transform .25s ease;
+    }
+    .card:hover img{ transform:scale(1.03); }
+    .card .overlay{
+      position:absolute; inset:0; pointer-events:none;
+      background:linear-gradient(to top, rgba(0,0,0,.18), rgba(0,0,0,0));
+      opacity:0; transition:opacity .2s ease;
+      border-radius:12px;
+    }
+    .card:hover .overlay{ opacity:1; }
+
+    /* lightbox */
+    .lb{
+      position:fixed; inset:0; display:none; place-items:center;
+      background:rgba(0,0,0,.8); z-index:9999;
+    }
+    .lb.open{ display:grid; }
+    .lb-inner{
+      position:relative; max-width:min(96vw, var(--maxw));
+      max-height:92vh; display:flex; align-items:center; justify-content:center;
+    }
+    .lb-img{
+      max-width:100%; max-height:92vh; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+      user-select:none; -webkit-user-drag:none;
+    }
+    .lb-close, .lb-prev, .lb-next{
+      position:absolute; top:50%; transform:translateY(-50%);
+      background:rgba(255,255,255,.85); border:none; padding:10px 12px; border-radius:10px;
+      cursor:pointer; font-size:18px; line-height:1; box-shadow:0 4px 14px rgba(0,0,0,.25);
+    }
+    .lb-close{
+      top:12px; right:12px; transform:none; font-size:20px; padding:8px 12px;
+    }
+    .lb-prev{ left:-56px; }
+    .lb-next{ right:-56px; }
+    @media (max-width: 900px){
+      .lb-prev{ left:12px; }
+      .lb-next{ right:12px; }
+    }
+    .lb-counter{
+      position:absolute; bottom:-34px; left:50%; transform:translateX(-50%);
+      color:#eee; font-size:.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- top nav -->
+    <nav class="nav">
+      <a href="./index.html#bio">bio</a>
+      <a href="./index.html#publications">publications</a>
+      <a href="https://github.com/DijieZhu" target="_blank" rel="noopener">repositories</a>
+      <a href="#" class="active">hobbies</a>
+    </nav>
+
+    <header>
+      <h1>Personal Hobbies</h1>
+      <p class="muted">
+        I enjoy playing football, basketball, swimming, traveling, taking aesthetic photos, and video games.
+      </p>
+      <p class="fineprint">
+        Many friends say I have a good eye for photography. I hope this small album gives you a brief break from study and life — enjoy the view.
+      </p>
+    </header>
+
+    <section aria-label="Photo Album">
+      <h2>Photo Album</h2>
+      <div class="gallery" id="gallery">
+        <!-- Thumbnails (click to open full image) -->
+        <a href="./assets/hobbies/hobbies1.jpg" class="card"><img src="./assets/hobbies/hobbies1.jpg" alt="hobby photo 1" loading="lazy"><span class="overlay"></span></a>
+        <a href="./assets/hobbies/hobbies2.jpg" class="card"><img src="./assets/hobbies/hobbies2.jpg" alt="hobby photo 2" loading="lazy"><span class="overlay"></span></a>
+        <a href="./assets/hobbies/hobbies3.jpg" class="card"><img src="./assets/hobbies/hobbies3.jpg" alt="hobby photo 3" loading="lazy"><span class="overlay"></span></a>
+        <a href="./assets/hobbies/hobbies4.jpg" class="card"><img src="./assets/hobbies/hobbies4.jpg" alt="hobby photo 4" loading="lazy"><span class="overlay"></span></a>
+        <a href="./assets/hobbies/hobbies5.jpg" class="card"><img src="./assets/hobbies/hobbies5.jpg" alt="hobby photo 5" loading="lazy"><span class="overlay"></span></a>
+        <a href="./assets/hobbies/hobbies6.jpg" class="card"><img src="./assets/hobbies/hobbies6.jpg" alt="hobby photo 6" loading="lazy"><span class="overlay"></span></a>
+        <a href="./assets/hobbies/hobbies7.jpg" class="card"><img src="./assets/hobbies/hobbies7.jpg" alt="hobby photo 7" loading="lazy"><span class="overlay"></span></a>
+        <a href="./assets/hobbies/hobbies8.jpg" class="card"><img src="./assets/hobbies/hobbies8.jpg" alt="hobby photo 8" loading="lazy"><span class="overlay"></span></a>
+        <a href="./assets/hobbies/hobbies9.jpg" class="card"><img src="./assets/hobbies/hobbies9.jpg" alt="hobby photo 9" loading="lazy"><span class="overlay"></span></a>
+        <a href="./assets/hobbies/hobbies10.jpg" class="card"><img src="./assets/hobbies/hobbies10.jpg" alt="hobby photo 10" loading="lazy"><span class="overlay"></span></a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Lightbox (pure JS) -->
+  <div class="lb" id="lightbox" aria-modal="true" role="dialog">
+    <div class="lb-inner">
+      <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+      <button class="lb-prev"  id="lbPrev"  aria-label="Previous">‹</button>
+      <img class="lb-img" id="lbImg" alt="full view" />
+      <button class="lb-next"  id="lbNext"  aria-label="Next">›</button>
+      <div class="lb-counter" id="lbCounter"></div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const galleryLinks = Array.from(document.querySelectorAll('#gallery a.card'));
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lbImg');
+      const lbClose = document.getElementById('lbClose');
+      const lbPrev = document.getElementById('lbPrev');
+      const lbNext = document.getElementById('lbNext');
+      const lbCounter = document.getElementById('lbCounter');
+      let idx = 0;
+
+      function openAt(i){
+        idx = (i + galleryLinks.length) % galleryLinks.length;
+        const link = galleryLinks[idx];
+        lbImg.src = link.getAttribute('href');
+        lbImg.alt = link.querySelector('img')?.alt || 'photo';
+        lbCounter.textContent = (idx+1) + ' / ' + galleryLinks.length;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLb(){
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+      function next(){ openAt(idx+1); }
+      function prev(){ openAt(idx-1); }
+
+      // Click thumbnails
+      galleryLinks.forEach((a,i)=>{
+        a.addEventListener('click', e=>{
+          e.preventDefault();
+          openAt(i);
+        });
+      });
+
+      // Controls
+      lbClose.addEventListener('click', closeLb);
+      lbNext.addEventListener('click', next);
+      lbPrev.addEventListener('click', prev);
+
+      // Click outside image closes
+      lb.addEventListener('click', (e)=>{
+        if(e.target === lb) closeLb();
+      });
+
+      // Keyboard
+      window.addEventListener('keydown', (e)=>{
+        if(!lb.classList.contains('open')) return;
+        if(e.key === 'Escape') closeLb();
+        if(e.key === 'ArrowRight') next();
+        if(e.key === 'ArrowLeft') prev();
+      });
+
+      // Optional: preload neighbors
+      function preload(i){
+        const j = (i + galleryLinks.length) % galleryLinks.length;
+        const url = galleryLinks[j].getAttribute('href');
+        const img = new Image(); img.src = url;
+      }
+      lbNext.addEventListener('click', ()=>preload(idx+2));
+      lbPrev.addEventListener('click', ()=>preload(idx-2));
+    })();
+  </script>
+</body>
+</html>
