@@ -4,76 +4,152 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dijie Zhu</title>
-  <meta name="description" content="Dijie Zhu — UCLA ECE · ML / Wireless / Robotics">
+  <meta name="description" content="Dijie Zhu — UCLA ECE · ML / Wireless / Robotics" />
   <style>
-    :root { --maxw: 980px; }
-    body { margin: 0; font: 16px/1.7 system-ui, -apple-system, Segoe UI, Roboto, Arial; color: #222; }
-    main { max-width: var(--maxw); margin: 40px auto; padding: 0 20px; }
-    .hero { display: grid; grid-template-columns: 1fr 260px; gap: 28px; align-items: start; }
-    h1 { font-size: 2.2rem; margin: 0 0 6px; }
-    .subtitle a { color: #1a73e8; text-decoration: none; }
-    .subtitle a:hover { text-decoration: underline; }
-    .card { width: 260px; }
-    .photo { width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
-    .section { margin-top: 28px; }
-    .muted { color: #555; }
-    .links a { display: inline-block; margin: 6px 12px 0 0; text-decoration: none; border-bottom: 1px solid #ddd; }
-    .links a:hover { border-color: #aaa; }
-    @media (max-width: 800px) {
-      .hero { grid-template-columns: 1fr; }
-      .card { width: 200px; }
+    :root{
+      --maxw: 980px;
+      --accent: #c2185b; /* a soft magenta */
+    }
+    html,body{margin:0; padding:0}
+    body{font:16px/1.75 system-ui, -apple-system, Segoe UI, Roboto, Arial; color:#222;}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:26px 20px 60px}
+
+    /* top nav */
+    .nav{display:flex; align-items:center; justify-content:flex-end; gap:22px; padding:10px 0 24px;}
+    .nav a{color:#666}
+    .nav a.active{color:var(--accent); font-weight:600}
+
+    h1{font-size:2.6rem; margin:0 0 8px; letter-spacing:.3px}
+    h2{font-size:1.8rem; margin:28px 0 12px}
+    h3{font-size:1.1rem; margin:0 0 8px}
+    .muted{color:#555}
+
+    /* hero */
+    .hero{display:grid; grid-template-columns: 1fr 300px; gap:30px; align-items:start;}
+    .photo{width:100%; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,.08)}
+
+    /* chips */
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
+    .chip{display:inline-block; padding:6px 10px; border:1px solid #ddd; border-radius:8px; font-size:.9rem}
+    .chip:hover{background:#f7f7f7}
+
+    /* pubs */
+    .pub{margin:18px 0}
+    .pub-title{font-weight:600}
+    .authors{color:#444}
+    .venue{font-style:italic}
+    details{background:#fafafa; border:1px solid #eee; border-radius:8px; padding:10px 12px; margin-top:8px}
+    pre{white-space:pre-wrap; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size:.9rem}
+
+    footer{margin-top:36px; color:#777}
+
+    @media (max-width: 800px){
+      .hero{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-<main>
+  <div class="wrap">
+    <!-- top nav -->
+    <nav class="nav">
+      <a href="#about" class="active">about</a>
+      <a href="#publications">publications</a>
+      <a href="https://github.com/DijieZhu" target="_blank" rel="noopener">repositories</a>
+      <a href="#teaching">teaching</a>
+    </nav>
 
-  <!-- 顶部：姓名 + 左文字 / 右头像 -->
-  <section class="hero">
-    <div>
-      <h1>Dijie Zhu</h1>
-      <div class="subtitle muted">
-        M.S. student, Electrical & Computer Engineering, UCLA<br>
-        Interests: Semi-Supervised Learning, Wireless Full-Duplex SIC, Robotics<br>
-        <a href="https://www.ee.ucla.edu/" target="_blank" rel="noopener">Department website</a>
-      </div>
-
-      <div class="section">
-        <h3>Contact</h3>
+    <!-- hero -->
+    <section id="about" class="hero">
+      <div>
+        <h1>Dijie <span class="muted">Zhu</span></h1>
+        <p class="muted">
+          M.S. student in Electrical & Computer Engineering at UCLA. I work on semi‑supervised learning (dynamic
+          thresholds, calibration), wireless in‑band full‑duplex self‑interference cancellation (NN‑aided digital SIC
+          under time‑varying channels), and robotics. I’m broadly interested in calibration/conformal methods for
+          reliability, generative simulation and evaluation, and wireless‑enabled multi‑robot coordination.
+        </p>
         <p>
-          Email: <a href="mailto:dijie@ucla.edu">dijie@ucla.edu</a><br>
-          CV: <a href="./cv.pdf" target="_blank" rel="noopener">Curriculum Vitae (PDF)</a><br>
-          GitHub: <a href="https://github.com/DijieZhu" target="_blank" rel="noopener">@DijieZhu</a><br>
-          Scholar: <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+          You can reach me at <a href="mailto:dijie@ucla.edu">dijie@ucla.edu</a>. A copy of my CV is available
+          <a href="./cv.pdf" target="_blank" rel="noopener">here (PDF)</a>.
         </p>
-        <p class="links">
-          <a href="./cv.pdf" target="_blank" rel="noopener">Download CV</a>
-          <a href="mailto:dijie@ucla.edu">Email me</a>
-          <a href="https://github.com/DijieZhu" target="_blank" rel="noopener">GitHub</a>
-        </p>
+        <div class="chips">
+          <a class="chip" href="mailto:dijie@ucla.edu">Email</a>
+          <a class="chip" href="./cv.pdf" target="_blank" rel="noopener">CV</a>
+          <a class="chip" href="https://github.com/DijieZhu" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
-    </div>
+      <aside>
+        <img class="photo" src="./avatar.jpg" alt="Dijie Zhu portrait" />
+      </aside>
+    </section>
 
-    <aside class="card">
-      <img class="photo" src="./avatar.jpg" alt="Dijie Zhu portrait">
-    </aside>
-  </section>
+    <!-- publications -->
+    <section id="publications">
+      <h2>selected publications</h2>
 
-  <!-- Research 段落 -->
-  <section class="section">
-    <h2>Research</h2>
-    <p>
-      I study semi-supervised learning (dynamic thresholding, pseudo-label calibration),
-      wireless in-band full-duplex self-interference cancellation (NN-aided digital SIC under time-varying channels),
-      and robotics (control + vision). Current focus: faster-converging SSL beyond FreeMatch/InfoMatch with better final accuracy.
-    </p>
-    <p>
-      Broader interests include calibration/conformal methods for reliability,
-      generative simulation and evaluation, and wireless-enabled multi-robot coordination.
-    </p>
-  </section>
+      <div class="pub">
+        <div class="pub-title">Digital Nonlinearity Cancellation Architecture Based on An Auxiliary Transmit Antenna Array</div>
+        <div class="authors">Fang Nan, Nanxi Li, <strong>Dijie Zhu</strong>, Yuetian Zhou, Sujie Dai, Jianchi Zhu, Jinlong Tian, Xiaoming She</div>
+        <div class="venue">In <em>ITCC 2023: Proc. of the 5th International Conference on Information Technology and Computer Communications</em>, pp. 32–37.</div>
+        <div class="chips">
+          <a class="chip" href="https://doi.org/10.1145/3606843.3606849" target="_blank" rel="noopener">DOI</a>
+        </div>
+        <details>
+          <summary>BibTeX</summary>
+<pre>@inproceedings{zhu2023itcc,
+  title={Digital Nonlinearity Cancellation Architecture Based on An Auxiliary Transmit Antenna Array},
+  author={Nan, Fang and Li, Nanxi and Zhu, Dijie and Zhou, Yuetian and Dai, Sujie and Zhu, Jianchi and Tian, Jinlong and She, Xiaoming},
+  booktitle={Proceedings of ITCC},
+  year={2023},
+  pages={32--37},
+  doi={10.1145/3606843.3606849}
+}</pre>
+        </details>
+      </div>
 
-  <p class="muted section">Last updated: 2025-09-15</p>
-</main>
+      <div class="pub">
+        <div class="pub-title">A Post-Correction Method for Terahertz Nonlinear Distortion with Dual-Band Carrier Aggregation</div>
+        <div class="authors">Mengyao Zhang, Jian Liu, <strong>Dijie Zhu</strong>, Xin Quan, Qiang Xu, Ying Liu, Zhi Chen</div>
+        <div class="venue">In <em>IEEE Globecom Workshops</em> (Sixth IEEE International Workshop on Terahertz Communications), 2022.</div>
+        <details>
+          <summary>BibTeX</summary>
+<pre>@inproceedings{zhu2022thz,
+  title={A Post-Correction Method for Terahertz Nonlinear Distortion with Dual-Band Carrier Aggregation},
+  author={Zhang, Mengyao and Liu, Jian and Zhu, Dijie and Quan, Xin and Xu, Qiang and Liu, Ying and Chen, Zhi},
+  booktitle={IEEE Globecom Workshops},
+  year={2022}
+}</pre>
+        </details>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">Improved Almost Blank Subframe Technology with Cooperative Interference Suppression</div>
+        <div class="authors">Cong Chen, Zixuan Long, Fang Nan, Luyao Xiao, <strong>Dijie Zhu</strong>, Xiang Li, Ying Liu, Shihai Shao</div>
+        <div class="venue"><em>International Journal of Numerical Modelling: Electronic Networks, Devices, and Fields</em>, 2023.</div>
+        <details>
+          <summary>BibTeX</summary>
+<pre>@article{zhu2023ijonm,
+  title={Improved Almost Blank Subframe Technology with Cooperative Interference Suppression},
+  author={Chen, Cong and Long, Zixuan and Nan, Fang and Xiao, Luyao and Zhu, Dijie and Li, Xiang and Liu, Ying and Shao, Shihai},
+  journal={International Journal of Numerical Modelling: Electronic Networks, Devices, and Fields},
+  year={2023}
+}</pre>
+        </details>
+      </div>
+    </section>
+
+    <!-- teaching (optional placeholder) -->
+    <section id="teaching">
+      <h2>teaching</h2>
+      <p class="muted">—</p>
+    </section>
+
+    <footer>
+      <p>Last updated: 2025‑09‑15</p>
+    </footer>
+  </div>
 </body>
 </html>
+
