@@ -43,6 +43,11 @@
     details{background:#fafafa; border:1px solid #eee; border-radius:8px; padding:10px 12px; margin-top:8px}
     pre{white-space:pre-wrap; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size:.9rem}
 
+    /* fine print & gallery */
+    .fineprint{color:#777; font-size:.9rem; margin-top:8px}
+    .gallery{display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:12px; margin-top:14px}
+    .gallery img{width:100%; height:220px; object-fit:cover; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,.08)}
+
     footer{margin-top:36px; color:#777}
 
     @media (max-width: 800px){
@@ -54,14 +59,14 @@
   <div class="wrap">
     <!-- top nav -->
     <nav class="nav">
-      <a href="#about" class="active">about</a>
+      <a href="#bio" class="active">bio</a>
       <a href="#publications">publications</a>
       <a href="https://github.com/DijieZhu" target="_blank" rel="noopener">repositories</a>
-      <a href="#teaching">teaching</a>
+      <a href="#hobbies">hobbies</a>
     </nav>
 
     <!-- hero -->
-    <section id="about" class="hero">
+    <section id="bio" class="hero">
       <div>
         <h1>Dijie <span class="muted">Zhu</span></h1>
         <p class="muted">
@@ -84,6 +89,7 @@
           <a class="chip" href="./cv.pdf" target="_blank" rel="noopener">CV</a>
           <a class="chip" href="https://github.com/DijieZhu" target="_blank" rel="noopener">GitHub</a>
         </div>
+        <p class="fineprint">In a world with countless webpages, it’s unlikely you’d land on mine — thanks for being here.</p>
       </div>
       <aside>
         <img class="photo" src="./avatar.jpg" alt="Dijie Zhu portrait" />
@@ -145,13 +151,32 @@
       </div>
     </section>
 
+    <!-- hobbies -->
+    <section id="hobbies">
+      <h2>personal hobbies</h2>
+      <p class="fineprint">Many friends say I have a good eye for photography. I hope this small album gives you a brief break from study and life — enjoy the view.</p>
+      <div class="gallery">
+        <img src="./assets/hobbies/hobbies1.jpg" alt="hobby photo 1" loading="lazy" />
+        <img src="./assets/hobbies/hobbies2.jpg" alt="hobby photo 2" loading="lazy" />
+        <img src="./assets/hobbies/hobbies3.jpg" alt="hobby photo 3" loading="lazy" />
+        <img src="./assets/hobbies/hobbies4.jpg" alt="hobby photo 4" loading="lazy" />
+        <img src="./assets/hobbies/hobbies5.jpg" alt="hobby photo 5" loading="lazy" />
+        <img src="./assets/hobbies/hobbies6.jpg" alt="hobby photo 6" loading="lazy" />
+        <img src="./assets/hobbies/hobbies7.jpg" alt="hobby photo 7" loading="lazy" />
+        <img src="./assets/hobbies/hobbies8.jpg" alt="hobby photo 8" loading="lazy" />
+        <img src="./assets/hobbies/hobbies9.jpg" alt="hobby photo 9" loading="lazy" />
+        <img src="./assets/hobbies/hobbies10.jpg" alt="hobby photo 10" loading="lazy" />
+      </div>
+    </section>
 
     <footer>
-      <p>Last updated: 2025‑09‑15</p>
+      <p>Last updated: 2025-09-15</p>
     </footer>
   </div>
 </body>
 </html>
+
+
 
 
 
