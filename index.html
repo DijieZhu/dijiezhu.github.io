@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dijie Zhu</title>
+  <meta name="description" content="Dijie Zhu — UCLA ECE · ML / Wireless / Robotics">
+  <style>
+    :root { --maxw: 980px; }
+    body { margin: 0; font: 16px/1.7 system-ui, -apple-system, Segoe UI, Roboto, Arial; color: #222; }
+    main { max-width: var(--maxw); margin: 40px auto; padding: 0 20px; }
+    .hero { display: grid; grid-template-columns: 1fr 260px; gap: 28px; align-items: start; }
+    h1 { font-size: 2.2rem; margin: 0 0 6px; }
+    .subtitle a { color: #1a73e8; text-decoration: none; }
+    .subtitle a:hover { text-decoration: underline; }
+    .card { width: 260px; }
+    .photo { width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+    .section { margin-top: 28px; }
+    .muted { color: #555; }
+    .links a { display: inline-block; margin: 6px 12px 0 0; text-decoration: none; border-bottom: 1px solid #ddd; }
+    .links a:hover { border-color: #aaa; }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; }
+      .card { width: 200px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+
+  <!-- 顶部：姓名 + 左文字 / 右头像 -->
+  <section class="hero">
+    <div>
+      <h1>Dijie Zhu</h1>
+      <div class="subtitle muted">
+        M.S. student, Electrical & Computer Engineering, UCLA<br>
+        Interests: Semi-Supervised Learning, Wireless Full-Duplex SIC, Robotics<br>
+        <a href="https://www.ee.ucla.edu/" target="_blank" rel="noopener">Department website</a>
+      </div>
+
+      <div class="section">
+        <h3>Contact</h3>
+        <p>
+          Email: <a href="mailto:dijie@ucla.edu">dijie@ucla.edu</a><br>
+          CV: <a href="./cv.pdf" target="_blank" rel="noopener">Curriculum Vitae (PDF)</a><br>
+          GitHub: <a href="https://github.com/DijieZhu" target="_blank" rel="noopener">@DijieZhu</a><br>
+          Scholar: <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+        </p>
+        <p class="links">
+          <a href="./cv.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a href="mailto:dijie@ucla.edu">Email me</a>
+          <a href="https://github.com/DijieZhu" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </div>
+    </div>
+
+    <aside class="card">
+      <img class="photo" src="./avatar.jpg" alt="Dijie Zhu portrait">
+    </aside>
+  </section>
+
+  <!-- Research 段落 -->
+  <section class="section">
+    <h2>Research</h2>
+    <p>
+      I study semi-supervised learning (dynamic thresholding, pseudo-label calibration),
+      wireless in-band full-duplex self-interference cancellation (NN-aided digital SIC under time-varying channels),
+      and robotics (control + vision). Current focus: faster-converging SSL beyond FreeMatch/InfoMatch with better final accuracy.
+    </p>
+    <p>
+      Broader interests include calibration/conformal methods for reliability,
+      generative simulation and evaluation, and wireless-enabled multi-robot coordination.
+    </p>
+  </section>
+
+  <p class="muted section">Last updated: 2025-09-15</p>
+</main>
+</body>
+</html>
