@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Misc — Dijie Zhu</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+    .wrap{max-width:980px; margin:0 auto; padding:26px 20px 60px}
+    .nav{display:flex; align-items:center; justify-content:flex-end; gap:22px; padding:10px 0 24px;}
+    .nav a{color:#666; text-decoration:none}
+    .nav a.active{color:#1a73e8; font-weight:600}
+    h1{margin:0 0 8px}
+    .muted{color:#666}
+    .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; align-items:start}
+    figure{margin:0}
+    figure img{width:100%; height:auto; display:block; border-radius:8px}
+    figcaption{font-size:12px; color:#555; margin-top:6px}
+    .section{margin-top:22px}
+    .quote{white-space:pre-wrap; background:#fafafa; border:1px solid #eee; border-radius:8px; padding:10px 12px}
+    @media (prefers-color-scheme: dark){
+      .muted{color:#b7b7b7}
+      .quote{background:#15161a; border-color:#2a2b2f}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <a href="./index.html">Bio</a>
+      <a href="./misc.html" class="active">Misc</a>
+    </nav>
+
+    <header>
+      <h1 class="name">Misc — Hobbies & Photos</h1>
+      <p class="muted">Photos and notes are loaded from <code>./Misc/gallery.json</code> and <code>./Misc/notes.txt</code>.</p>
+    </header>
+
+    <section class="section" id="notes">
+      <h2>notes</h2>
+      <div id="notesBox" class="quote">Loading notes…</div>
+    </section>
+
+    <section class="section" id="photos">
+      <h2>photos</h2>
+      <p class="muted">朋友都说我有一双发现美的眼睛。希望这些照片能带给你一点小小的快乐，也祝你此刻远离一些压力。</p>
+      <div id="gallery" class="grid" aria-live="polite">Loading photos…</div>
+    </section>
+
+    <footer><p class="muted">Last updated: 2025-10-27</p></footer>
+  </div>
+
+  <script>
+  (async function(){
+    try{
+      const r = await fetch('./Misc/notes.txt', {cache:'no-cache'});
+      if(!r.ok) throw 0;
+      const txt = await r.text();
+      document.getElementById('notesBox').textContent = txt.trim() || '（空）';
+    }catch(e){
+      document.getElementById('notesBox').textContent = 'Add your text to ./Misc/notes.txt';
+    }
+
+    let items = [];
+    try{
+      const r = await fetch('./Misc/gallery.json', {cache:'no-cache'});
+      if(!r.ok) throw 0;
+      items = await r.json();
+    }catch(e){
+      document.getElementById('gallery').innerHTML = '<p class="muted">Add a JSON file at <code>./Misc/gallery.json</code> with your images.</p>';
+      return;
+    }
+
+    const g = document.getElementById('gallery');
+    g.innerHTML = '';
+    items.forEach(it => {
+      const fig = document.createElement('figure');
+      const img = document.createElement('img');
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.alt = it.alt || it.caption || 'Photo';
+      img.src = it.src;
+      fig.appendChild(img);
+      if(it.caption){
+        const cap = document.createElement('figcaption');
+        cap.textContent = it.caption;
+        fig.appendChild(cap);
+      }
+      g.appendChild(fig);
+    });
+  })();
+  </script>
+</body>
+</html>
