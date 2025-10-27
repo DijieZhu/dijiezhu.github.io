@@ -1,32 +1,12 @@
 [
-  {
-    "src": "./Misc/hobbies1.jpg",
-  },
-  {
-    "src": "./Misc/hobbies2.jpg",
-  },
-  {
-    "src": "./Misc/hobbies3.jpg",
-  }
-  {
-    "src": "./Misc/hobbies4.jpg",
-  }
-  {
-    "src": "./Misc/hobbies5.jpg",
-  }
-  {
-    "src": "./Misc/hobbies6.jpg",
-  }
-  {
-    "src": "./Misc/hobbies7.jpg",
-  }
-  {
-    "src": "./Misc/hobbies8.jpg",
-  }
-  {
-    "src": "./Misc/hobbies9.jpg",
-  }
-  {
-    "src": "./Misc/hobbies10.jpg",
-  }
+  { "src": "./Misc/hobbies1.jpg" },
+  { "src": "./Misc/hobbies2.jpg" },
+  { "src": "./Misc/hobbies3.jpg" },
+  { "src": "./Misc/hobbies4.jpg" },
+  { "src": "./Misc/hobbies5.jpg" },
+  { "src": "./Misc/hobbies6.jpg" },
+  { "src": "./Misc/hobbies7.jpg" },
+  { "src": "./Misc/hobbies8.jpg" },
+  { "src": "./Misc/hobbies9.jpg" },
+  { "src": "./Misc/hobbies10.jpg" }
 ]
