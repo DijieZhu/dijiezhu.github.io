@@ -1,115 +1,155 @@
-<!DOCTYPE HTML> 
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Dijie Zhu</title>
-    <meta name="author" content="Dijie Zhu">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  </head>
-  <body>
-    <table style="width:100%;max-width:800px;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
-      <tr>
-        <td>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Dijie Zhu">
+  <meta name="description" content="Dijie Zhu — robotics and machine learning. Research on lifelong robot learning through evaluation, recovery, and data flywheels that improve both policies and evaluators.">
+  <meta name="theme-color" content="#f5f6f8">
+  <title>Dijie Zhu — Robotics &amp; Machine Learning</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/portfolio.css">
+  <link rel="stylesheet" href="./assets/css/flywheel.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script src="./assets/js/portfolio.js" defer></script>
+  <script src="./assets/js/flywheel.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#about" data-page-link="about">Skip to content</a>
+  <main>
+    <aside class="sidebar" data-sidebar aria-label="Profile and links">
+      <div class="sidebar-info">
+        <figure class="avatar-box"><img src="./avatar.jpg" alt="Dijie Zhu" width="150" height="150" fetchpriority="high"></figure>
+        <div class="info-content"><h1 class="name">Dijie Zhu</h1><p class="title">Robotics &amp; Machine Learning</p></div>
+        <button class="info_more-btn" type="button" data-sidebar-btn aria-label="Show profile links" aria-expanded="false" aria-controls="profile-links"><span>Show links</span><b class="sidebar-chevron" aria-hidden="true">⌄</b></button>
+      </div>
+      <div class="sidebar-info_more" id="profile-links">
+        <div class="separator"></div>
+        <ul class="contacts-list"><li class="contact-item"><div class="icon-box"><svg viewBox="0 0 34 36" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="26" height="20" rx="3"/><path d="m4 9 13 10L30 9"/></svg></div><div class="contact-info"><p class="contact-title">Email</p><a class="contact-link" href="mailto:dijie@ucla.edu">dijie@ucla.edu</a></div></li><li class="contact-item"><div class="icon-box"><svg viewBox="0 0 34 36" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h13l7 7v21H8V3Zm13 0v8h7M13 17h10m-10 6h10"/></svg></div><div class="contact-info"><p class="contact-title">Curriculum vitae</p><a class="contact-link" href="./cv.pdf" target="_blank" rel="noopener">View CV ↗</a></div></li><li class="contact-item"><div class="icon-box"><svg viewBox="0 0 34 36" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8C10 3 3 6 3 6v22s7-3 14 2c7-5 14-2 14-2V6s-7-3-14 2Zm0 0v22"/></svg></div><div class="contact-info"><p class="contact-title">Google Scholar</p><a class="contact-link" href="https://scholar.google.com/citations?user=Dq7DLFwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Publications ↗</a></div></li><li class="contact-item"><div class="icon-box"><svg viewBox="0 0 34 36" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 20 8-8M12 23l-2 2a6 6 0 0 1-8-8l6-6a6 6 0 0 1 8 0m6 0 2-2a6 6 0 0 1 8 8l-6 6a6 6 0 0 1-8 0"/></svg></div><div class="contact-info"><p class="contact-title">GitHub</p><a class="contact-link" href="https://github.com/DijieZhu" target="_blank" rel="noopener">DijieZhu ↗</a></div></li></ul>
+        <div class="separator"></div>
+        <p class="sidebar-note">M.S. ECE · UCLA, 2026<br>Robot learning &amp; applied ML</p>
+      </div>
+    </aside>
+    <div class="main-content">
+      <nav class="navbar" aria-label="Portfolio sections"><ul class="navbar-list"><li class="navbar-item"><a class="navbar-link active" href="#about" data-nav-link="about" aria-current="page">About</a></li><li class="navbar-item"><a class="navbar-link" href="#research" data-nav-link="research">Research</a></li><li class="navbar-item"><a class="navbar-link" href="#resume" data-nav-link="resume">Resume</a></li><li class="navbar-item"><a class="navbar-link" href="#photos" data-nav-link="photos">Photos</a></li><li class="navbar-item"><a class="navbar-link" href="#contact" data-nav-link="contact">Contact</a></li></ul></nav>
 
-          <!-- top nav (right aligned) -->
-          <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
-            <tr>
-              <td style="text-align:right; padding:10px 0 16px;">
-                <a class="tag" href="./index.html">Bio</a>
-                <a class="tag" href="./misc.html">Misc</a>
-              </td>
-            </tr>
-          </tbody></table>
+      <article class="about active" id="about" data-page="about" tabindex="-1" aria-label="About me">
+        <header><h2 class="h2 article-title">About me</h2></header>
+        <p class="intro-kicker">ROBOTICS · EVALUATION · RELIABLE LEARNING</p>
+        <h3 class="intro-heading">Building a data flywheel<br><em>for lifelong robot learning.</em></h3>
+        <section class="about-text" aria-label="Introduction">
+          <p>I am currently a Research Assistant in the Trustworthy Autonomous Systems Laboratory (TASL) at Georgia Tech. Before that, I graduated from UCLA with an M.S. in Electrical and Computer Engineering in 2026. I completed my B.Eng. through the UESTC / University of Glasgow (UofG) joint programme.</p>
+          <p>I want to build a data flywheel for lifelong robot learning. Better evaluators would guide decisions during execution: when a potential failure is detected, the robot should decide whether to continue, attempt a recovery, or ask for human help. The resulting executions, failures, and corrections would provide data to improve both the policy and the evaluator.</p>
+          <p>My focus is on making this cycle reliable: selecting useful experience, retaining earlier skills as the policy learns, and checking evaluator reliability after each update. The goal is for robots to learn from deployment, complete longer tasks more reliably, and need less human assistance over time.</p>
+        </section>
+        <div class="intro-actions"><a class="accent-button" href="#research" data-page-link="research">Explore my work <span aria-hidden="true">↗</span></a><a class="quiet-link" href="./cv.pdf" target="_blank" rel="noopener">View CV <span aria-hidden="true">↗</span></a></div>
+          <figure class="flywheel-demo" aria-labelledby="flywheel-title">
+            <figcaption>
+              <span class="flywheel-eyebrow">Research vision</span>
+              <h3 id="flywheel-title">A data flywheel for lifelong robot learning</h3>
+              <p class="flywheel-flow-note">My research vision connects data-efficient learning, simulation-informed policy evaluation, and runtime recovery in one cycle. Each deployment should produce useful experience for improving both the robot policy and the evaluator.</p>
+            </figcaption>
+            <div class="flywheel-circle" role="group" aria-label="The repeating clockwise loop is Learning and Continual Learning, Evaluation, Execution, and Data Collection, returning to Learning. Evaluation includes revalidation after model updates.">
+              <svg class="flywheel-arrows" viewBox="0 0 600 600" aria-hidden="true">
+                <defs><marker id="flywheel-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+                <circle class="flywheel-orbit" cx="300" cy="300" r="222"/>
+                <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" marker-end="url(#flywheel-arrow)">
+                  <path class="flywheel-arc is-active" data-flywheel-arc="0" d="M375.93 91.39 A222 222 0 0 1 508.61 224.07"/>
+                  <path class="flywheel-arc" data-flywheel-arc="1" d="M508.61 375.93 A222 222 0 0 1 375.93 508.61"/>
+                  <path class="flywheel-arc" data-flywheel-arc="2" d="M224.07 508.61 A222 222 0 0 1 91.39 375.93"/>
+                  <path class="flywheel-arc" data-flywheel-arc="3" d="M91.39 224.07 A222 222 0 0 1 224.07 91.39"/>
+                </g>
+              </svg>
+              <div class="flywheel-center"><span>Lifelong<br>robot learning</span><small>Learn. Evaluate. Execute.</small></div>
+              <button class="flywheel-stage is-active" type="button" data-flywheel-step="0" aria-pressed="true" aria-controls="flywheel-detail"><span class="flywheel-number">01</span><strong>Learning /<br>Continual Learning</strong></button>
+              <button class="flywheel-stage" type="button" data-flywheel-step="1" aria-pressed="false" aria-controls="flywheel-detail"><span class="flywheel-number">02</span><strong>Evaluation</strong></button>
+              <button class="flywheel-stage" type="button" data-flywheel-step="2" aria-pressed="false" aria-controls="flywheel-detail"><span class="flywheel-number">03</span><strong>Execution</strong></button>
+              <button class="flywheel-stage" type="button" data-flywheel-step="3" aria-pressed="false" aria-controls="flywheel-detail"><span class="flywheel-number">04</span><strong>Data<br>Collection</strong></button>
+            </div>
+            <div class="flywheel-detail" id="flywheel-detail" aria-live="polite" aria-atomic="true">
+              <div class="flywheel-panel is-active">
+                <h4><span>01 / 04</span><span>Learning / Continual Learning</span></h4>
+                <p>Learn policies and evaluators from demonstrations, simulation, and limited labeled experience. For continual learning, select informative failures and corrections, combine them with earlier data, and improve weak behaviors while preserving existing skills.</p>
+                <p>Update the evaluator alongside the policy. Study which failure signals remain useful as behavior changes, and which need new training examples or fresh calibration data.</p>
+              </div>
+            </div>
+            <div class="flywheel-controls"><span data-flywheel-status>Select a stage to explore the loop.</span><div class="flywheel-playback"><button type="button" class="quiet-link" data-flywheel-play hidden>Pause animation</button><button type="button" class="quiet-link" data-flywheel-next hidden>Next step <span aria-hidden="true">→</span></button></div></div>
+          </figure>
+        <section class="research-highlight" aria-labelledby="highlight-title"><p class="eyebrow">Featured publication <span>CoRL 2026</span></p><h3 class="h3" id="highlight-title">SCAPE</h3><p>Scenario-Conditioned Simulation-Augmented Policy Evaluation</p><p class="highlight-detail">First-author research · Autonomous driving &amp; quadruped locomotion</p><a class="quiet-link" href="https://arxiv.org/abs/2608.19425" target="_blank" rel="noopener">Read the paper ↗</a></section>
+        <footer class="page-footer">Updated November 2026</footer>
+      </article>
 
-          <!-- Header -->
-          <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
-            <tr>
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align:center;">Dijie Zhu</p>
+      <article id="research" data-page="research" tabindex="-1" aria-label="Research">
+        <header><h2 class="h2 article-title">Research</h2></header>
+        <p class="section-intro">From estimating policy performance to improving execution and learning from experience.</p>
+        <section class="research-card featured-research">
+          <div class="card-topline"><span class="status-badge">CoRL 2026</span><span>First author</span></div>
+          <h3 class="h3">SCAPE: Scenario-Conditioned Simulation-Augmented Policy Evaluation</h3>
+          <p class="research-question">Where will a policy perform well when target-domain testing is expensive?</p>
+          <p>SCAPE combines limited paired target and simulation evaluations with large-scale simulation rollouts to predict performance for individual scenarios. It corrects scenario-dependent simulation bias and calibrates uncertainty with conformal prediction.</p>
+          <div class="method-flow" aria-label="SCAPE method overview"><div><span>01</span>Paired target &amp;<br>simulation data</div><b aria-hidden="true">→</b><div><span>02</span>Scenario-dependent<br>bias correction</div><b aria-hidden="true">→</b><div><span>03</span>Performance &amp;<br>uncertainty estimates</div></div>
+          <p>Evaluated on autonomous driving and quadruped velocity tracking, including deployment on a physical Unitree Go2.</p>
+          <p class="authors"><strong>Dijie Zhu</strong>, Seunghun Oh, Ruopeng Huang, Zhiyu Huang, Jiaqi Ma, Chen Tang</p>
+          <div class="card-links"><a class="accent-button" href="https://arxiv.org/abs/2608.19425" target="_blank" rel="noopener">Paper ↗</a><a class="quiet-link" href="https://arxiv.org/html/2608.19425v1" target="_blank" rel="noopener">Read online ↗</a></div>
+        </section>
+        <section class="research-card">
+          <div class="card-topline"><span class="status-badge subtle">Ongoing research</span><span>Action evaluation · Runtime recovery</span></div>
+          <h3 class="h3">Evaluation &amp; recovery for long-horizon VLA policies</h3>
+          <p class="research-question">Detecting unreliable actions before they derail long-horizon tasks.</p>
+          <p>This project studies evaluators that assess candidate actions and compare alternatives during vision-language-action (VLA) policy execution. The goal is to use these evaluations to guide correction, replanning, and recovery so robots can complete longer tasks more reliably.</p>
 
-                <p class="muted">
-                  I am an Electrical and Computer Engineering graduate from UCLA. Before UCLA, I completed my B.Eng. through the UESTC and University of Glasgow joint programme, graduating with <strong>UK First Class Honour</strong>.
-                </p>
+        </section>
+        <section class="research-card">
+          <div class="card-topline"><span class="status-badge subtle">Semi-supervised learning</span><span>Image recognition</span></div>
+          <h3 class="h3">Image recognition with limited labels</h3>
+          <p class="research-question">Using unlabeled images without reinforcing incorrect predictions.</p>
+          <p>This project explores confidence-based pseudo-label selection and adaptive training schedules for semi-supervised image recognition. The goal is to reduce the influence of unreliable pseudo-labels early in training and make better use of unlabeled data as the model improves.</p>
+        </section>
+        <section class="earlier-publications"><h3 class="h3">Earlier publications</h3><p class="section-intro small">Wireless communications &amp; signal processing</p><ol class="publication-list">
+          <li>
+            <h3 class="h4">Digital Nonlinearity Cancellation Architecture Based on an Auxiliary Transmit Antenna Array</h3>
+            <p class="authors">Fang Nan, Nanxi Li, <strong>Dijie Zhu</strong>, Yuetian Zhou, Sujie Dai, Jianchi Zhu, Jinlong Tian, Xiaoming She</p>
+            <p class="publication-meta">ITCC 2023 · pp. 32–37 <a href="https://doi.org/10.1145/3606843.3606849" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a></p>
+          </li>
+          <li>
+            <h3 class="h4">A Post Correction Method for Terahertz Nonlinear Distortion with Dual Band Carrier Aggregation</h3>
+            <p class="authors">Mengyao Zhang, Jian Liu, <strong>Dijie Zhu</strong>, Xin Quan, Qiang Xu, Ying Liu, Zhi Chen</p>
+            <p class="publication-meta">IEEE Globecom Workshops · Sixth IEEE International Workshop on Terahertz Communications, 2022</p>
+          </li>
+          <li>
+            <h3 class="h4">Improved Almost Blank Subframe Technology with Cooperative Interference Suppression</h3>
+            <p class="authors">Cong Chen, Zixuan Long, Fang Nan, Luyao Xiao, <strong>Dijie Zhu</strong>, Xiang Li, Ying Liu, Shihai Shao</p>
+            <p class="publication-meta">International Journal of Numerical Modelling: Electronic Networks, Devices, and Fields, 2023</p>
+          </li>
+        </ol></section>
+      </article>
 
-                <p>
-                  My research interests center on reliable and trustworthy machine learning systems for robotics and embodied AI, including Sim2Real, policy evaluation, uncertainty estimation, reinforcement learning, computer vision, and semi supervised learning for image recognition. Broadly, I am interested in building AI systems that are accurate, data efficient, trustworthy, and useful in real world decision making settings, especially when decisions must be made under uncertainty.
-                </p>
+      <article id="resume" data-page="resume" tabindex="-1" aria-label="Resume">
+        <header><h2 class="h2 article-title">Resume</h2></header>
+        <div class="resume-intro"><p class="section-intro">Research experience across robot learning, policy evaluation, and data-efficient machine learning.</p><a class="accent-button" href="./cv.pdf" target="_blank" rel="noopener">Full CV ↗</a></div>
+        <section class="timeline"><div class="title-wrapper"><div class="icon-box"><svg viewBox="0 0 34 36" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8C10 3 3 6 3 6v22s7-3 14 2c7-5 14-2 14-2V6s-7-3-14 2Zm0 0v22"/></svg></div><h3 class="h3">Research experience</h3></div><ol class="timeline-list"><li class="timeline-item"><h4 class="h4 timeline-item-title">Research Assistant · Georgia Tech</h4><span>TASL · Prof. Jiachen Li</span><p class="timeline-text">Studying evaluation and recovery for long-horizon vision-language-action policies, including unreliable-action detection and runtime decisions.</p></li><li class="timeline-item"><h4 class="h4 timeline-item-title">Research Assistant · UCLA</h4><span>TAMS Lab · Prof. Chen Tang</span><p class="timeline-text">Led SCAPE, combining limited paired target and simulation evaluations with large-scale simulation rollouts to estimate scenario-conditioned policy performance.</p></li><li class="timeline-item"><h4 class="h4 timeline-item-title">Research Assistant · UCLA</h4><span>Prof. Suhas Diggavi</span><p class="timeline-text">Studied semi-supervised image recognition, confidence-based pseudo-label selection, and adaptive training schedules for limited and noisy labels.</p></li></ol></section><section class="timeline"><div class="title-wrapper"><div class="icon-box"><svg viewBox="0 0 34 36" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8C10 3 3 6 3 6v22s7-3 14 2c7-5 14-2 14-2V6s-7-3-14 2Zm0 0v22"/></svg></div><h3 class="h3">Education</h3></div><ol class="timeline-list"><li class="timeline-item"><h4 class="h4 timeline-item-title">University of California, Los Angeles</h4><span>M.S. · Electrical and Computer Engineering · 2026</span><p class="timeline-text">Graduate training in electrical and computer engineering, with research in machine learning and policy evaluation.</p></li><li class="timeline-item"><h4 class="h4 timeline-item-title">UESTC &amp; University of Glasgow</h4><span>B.Eng. · Joint programme</span><p class="timeline-text">Graduated with UK First Class Honours.</p></li></ol></section>
+        <section class="honors"><h3 class="h3">Selected honors</h3><ul><li>UESTC Academic Excellence Scholarships · 2020–2023</li><li>Glasgow College Academic Scholarships · 2022–2023</li><li>Outstanding Graduate of Sichuan Province &amp; UESTC</li><li>Gold Medal · 8th CBC Bank Cup National “Internet+” Entrepreneurship Competition</li><li>Gold Medal · UESTC Freshman Cup Football Tournament</li></ul></section>
+      </article>
 
-                <p>
-                  I am currently a Research Assistant at UCLA TAMS Lab, advised by <strong>Prof. Chen Tang</strong>, where I work on sample efficient policy evaluation for autonomous systems and embodied agents. This project studies how to estimate expensive policy performance using cheaper simulation signals, large scale scenario data, and uncertainty aware evaluation.
-                </p>
+      <article id="photos" data-page="photos" tabindex="-1" aria-label="Photos and life">
+        <header><h2 class="h2 article-title">Beyond research</h2></header>
+        <p class="section-intro">A few moments away from the desk.</p>
+        <p class="life-note">Outside research, I enjoy swimming, football, basketball, and taking photos. I also unwind with Minecraft and CS, and cherish time with friends and family.</p>
+        <div class="photo-grid" id="photo-grid" aria-label="Photography gallery" aria-live="polite"></div>
+        <p class="gallery-fallback"><a class="quiet-link" href="./misc.html">Visit the original photo gallery ↗</a></p>
+      </article>
 
-                <p>
-                  Previously, I worked with <strong>Prof. Suhas Diggavi</strong> on semi supervised learning for image recognition, focusing on dynamic thresholding, class balanced consistency, and label efficient learning. I also have earlier research experience in wireless communications and signal processing, including in band full duplex self interference cancellation and nonlinear distortion correction.
-                </p>
-
-                <p style="text-align:center">
-                  <a class="tag" href="mailto:dijie@ucla.edu">Email</a>
-                  <a class="tag" href="./cv.pdf" target="_blank" rel="noopener">CV</a>
-                  <a class="tag" href="https://github.com/DijieZhu" target="_blank" rel="noopener">GitHub</a>
-                </p>
-
-                <p class="muted" style="text-align:center">In a world with countless webpages, it’s unlikely you’d land on mine — thanks for being here.</p>
-              </td>
-
-              <td style="padding:2.5%;width:37%;max-width:37%;vertical-align:middle">
-                <img src="avatar.jpg" alt="Dijie Zhu portrait" style="width:100%;max-width:100%;object-fit:cover;border-radius:12px;">
-              </td>
-            </tr>
-          </tbody></table>
-
-          <!-- Selected Awards -->
-          <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
-            <tr>
-              <td style="padding:20px;vertical-align:middle">
-                <h2>Selected Awards</h2>
-                <ul>
-                  <li>UESTC Academic Excellence Scholarship for 2022–2023 <span class="muted"></span></li>
-                  <li>UESTC Academic Excellence Scholarship for 2021–2022 <span class="muted"></span></li>
-                  <li>UESTC Academic Excellence Scholarship for 2020–2021 <span class="muted"></span></li>
-                  <li>Glasgow College Academic Scholarships for 2022–2023 <span class="muted"></span></li>
-                  <li>Outstanding Graduates of Sichuan Province <span class="muted"></span></li>
-                  <li>Outstanding Graduates of UESTC</li>
-                  <li>Gold Medal, The 8th CBC Bank Cup National “Internet+” Entrepreneurship Competition</li>
-                  <li>Gold Medal, UESTC Freshman Cup Football Tournament</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody></table>
-
-          <!-- Publications -->
-          <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
-            <tr>
-              <td style="padding:20px;vertical-align:middle">
-                <h2>Selected Publications</h2>
-
-                <p style="margin:12px 0 4px;"><strong>Digital Nonlinearity Cancellation Architecture Based on an Auxiliary Transmit Antenna Array</strong></p>
-                <div class="muted">Fang Nan, Nanxi Li, <strong>Dijie Zhu</strong>, Yuetian Zhou, Sujie Dai, Jianchi Zhu, Jinlong Tian, Xiaoming She</div>
-                <div><em>ITCC 2023: Proc. of the 5th International Conference on Information Technology and Computer Communications</em>, pp. 32–37. <a href="https://doi.org/10.1145/3606843.3606849" target="_blank" rel="noopener">DOI</a></div>
-
-                <p style="margin:16px 0 4px;"><strong>A Post Correction Method for Terahertz Nonlinear Distortion with Dual Band Carrier Aggregation</strong></p>
-                <div class="muted">Mengyao Zhang, Jian Liu, <strong>Dijie Zhu</strong>, Xin Quan, Qiang Xu, Ying Liu, Zhi Chen</div>
-                <div><em>IEEE Globecom Workshops</em> Sixth IEEE International Workshop on Terahertz Communications, 2022.</div>
-
-                <p style="margin:16px 0 4px;"><strong>Improved Almost Blank Subframe Technology with Cooperative Interference Suppression</strong></p>
-                <div class="muted">Cong Chen, Zixuan Long, Fang Nan, Luyao Xiao, <strong>Dijie Zhu</strong>, Xiang Li, Ying Liu, Shihai Shao</div>
-                <div><em>International Journal of Numerical Modelling: Electronic Networks, Devices, and Fields</em>, 2023.</div>
-              </td>
-            </tr>
-          </tbody></table>
-
-          <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
-            <tr>
-              <td style="padding:20px;vertical-align:middle;text-align:center;color:#777">
-                Last updated: 2026-06-07
-              </td>
-            </tr>
-          </tbody></table>
-
-        </td>
-      </tr>
-    </tbody></table>
-  </body>
+      <article id="contact" data-page="contact" tabindex="-1" aria-label="Contact">
+        <header><h2 class="h2 article-title">Let’s connect</h2></header>
+        <p class="contact-lead">Interested in reliable robot learning?</p>
+        <p class="section-intro">I welcome conversations about research collaborations and opportunities in robotics and applied machine learning.</p>
+        <a class="email-card" href="mailto:dijie@ucla.edu"><div class="icon-box"><svg viewBox="0 0 34 36" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="26" height="20" rx="3"/><path d="m4 9 13 10L30 9"/></svg></div><div><span>Email me</span><strong>dijie@ucla.edu</strong></div><span aria-hidden="true">↗</span></a>
+        <div class="contact-resources"><a href="./cv.pdf" target="_blank" rel="noopener">Curriculum vitae ↗</a><a href="https://scholar.google.com/citations?user=Dq7DLFwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar ↗</a><a href="https://github.com/DijieZhu" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </article>
+    </div>
+  </main>
+  <dialog class="photo-dialog" aria-label="Photo viewer"><div class="photo-controls"><button type="button" data-photo-prev aria-label="Previous photo">←</button><button type="button" data-photo-next aria-label="Next photo">→</button><button type="button" data-photo-close aria-label="Close photo">Close ×</button></div><img id="photo-full" alt=""><p id="photo-caption"></p></dialog>
+</body>
 </html>
