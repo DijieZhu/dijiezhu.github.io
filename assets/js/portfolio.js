@@ -81,7 +81,7 @@ async function loadGallery() {
   } catch {
     const message = document.createElement('p');
     message.className = 'section-intro';
-    message.textContent = 'The gallery could not be loaded. You can visit the original gallery below.';
+    message.textContent = 'The photos could not be loaded. Please refresh the page to try again.';
     grid.append(message);
     galleryPromise = null;
   }
